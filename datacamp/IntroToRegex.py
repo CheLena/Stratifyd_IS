@@ -4,7 +4,7 @@
 Created on Sat Feb  8 11:58:31 2020
 
 @author: owenbezick
-
+TeSTTTTTTT
 Introduction to regular expressions datacamp course notes chapter 1.
 """
 
@@ -19,7 +19,7 @@ word_regex = '\w+'
 re.match(word_regex, 'hi there!')
 # Out: <re.Match object; span=(0, 2), match='hi'>
 
-""" 
+"""
 common patterns:
 \w words
 \d digits
@@ -27,7 +27,7 @@ common patterns:
 \. wildcard - will pick up anything
 + or * greedy
 capital letters negates the patterns
-can group using square brackets 
+can group using square brackets
 
 split, findall, search, match
 pattern first, the string second
@@ -44,11 +44,11 @@ re.findall(PATTERN, my_string)
 PATTERN = r"\w"
 re.findall(PATTERN, my_string)
 """
-Note: It's important to prefix your regex patterns with r to ensure that your 
-      patterns are interpreted in the way you want them to. Else, you may 
+Note: It's important to prefix your regex patterns with r to ensure that your
+      patterns are interpreted in the way you want them to. Else, you may
       encounter problems to do with escape sequences in strings. For example,
-      "\n" in Python is used to indicate a new line, but if you use the r prefix, 
-      it will be interpreted as the raw string "\n" - that is, the character "\" 
+      "\n" in Python is used to indicate a new line, but if you use the r prefix,
+      it will be interpreted as the raw string "\n" - that is, the character "\"
       followed by the character "n" - and not as a new line.
 """
 # Write a pattern to match sentence endings: sentence_endings
@@ -88,7 +88,7 @@ TweetTokenizer: special class just for tweet tokenization, allowing you to separ
 
 """
 from nltk.tokenize import word_tokenize
-word_tokenize("Hi there!") 
+word_tokenize("Hi there!")
 
 # re.serach() vs re.match()
 # pattern that might not be at beginning > use search
@@ -180,7 +180,7 @@ print(re.match(pattern2, sentences[3]))
 """
 Advanced Tokenization with Regex
 
-or method using | 
+or method using |
 define groups using ()
 define explicit character ranges using []
 
@@ -197,7 +197,7 @@ re.findall(match_digits_and_words, 'He has 11 cats.')
 #Out: ['He', 'has', '11', 'cats']
 my_str = 'match lowercase spaces nums like 12, but no commas'
 re.match('[a-z0-9 ]+', my_str)
-#Out: <_sre.SRE_Match object; 
+#Out: <_sre.SRE_Match object;
           #span=(0, 42), match='match lowercase spaces nums like 12'>
 from nltk.tokenize import regexp_tokenize
 from nltk.tokenize import TweetTokenizer
@@ -257,4 +257,3 @@ plt.hist(line_num_words)
 
 # Show the plot
 plt.show()
-
