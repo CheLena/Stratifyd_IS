@@ -1,8 +1,8 @@
 # Datasets
 
-## Two data sets from the closed captions of the [Virginia vs Purdue 2019 Full Game Youtube Video](https://www.youtube.com/watch?v=TRG2eulHn0k&list=PLXCWZ2G0LOavdqSs58wZ7Mx2YohF9fYEK).
+## Virginia VS Purdue 2019
 
-## One data set includes the time stamp, the other one does not. 
+### Two data sets from the closed captions of the [Virginia vs Purdue 2019 Full Game Youtube Video](https://www.youtube.com/watch?v=TRG2eulHn0k&list=PLXCWZ2G0LOavdqSs58wZ7Mx2YohF9fYEK). One data set includes the time stamp, the other one does not. 
 
 ### Goals:
 1. Preprocess and tokenize the transcripts
