@@ -5,10 +5,12 @@
  - Dan Murphy
  - Malcomb McCabe
  - Patrick Kelly
-## Advisory
+## Advisor
  - Dr. Che Smith
 ***
 ## Table of Contents
+### Data Camp Files
+   * NLP Chapters 1-4
 ### Data Sets
    * Virginia VS Purdue 2019
 ### Participant Workspaces
