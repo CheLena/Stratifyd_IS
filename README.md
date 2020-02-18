@@ -16,6 +16,8 @@
 ### Participant Workspaces
    * Owen
       * Pre-processed bag of words model for Virginia vs Purdue 2019.
+   * Dan
+      * Word and sentence tokenization for Virginia vs. Purdue 2019. Set up virtual environment
 ### Workshop Materials
 
 
