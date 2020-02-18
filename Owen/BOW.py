@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Bag of Words list of Virginia VS Purdue 2019 game closed captions.
+Exploratory analysis of Virginia VS Purdue 2019 game closed captions.
 
 @author: owenbezick
 """
 
 # read in .txt file
-f = open("/Users/danielmurphy/Desktop/Stratifyd_IS/datasets/VirginiaVSPurdue2019CC.txt", "r")
+f = open("VirginiaVSPurdue.txt", "r")
 
 # read file object as closedCaptions
 closedCaptions = f.read()
@@ -16,8 +14,6 @@ closedCaptions = f.read()
 import string # for string.puncutation
 table = str.maketrans('','', string.punctuation)
 stripped = closedCaptions.translate(table)
-
-#print(stripped)
 
 # tokenize
 from nltk.tokenize import word_tokenize
@@ -46,4 +42,4 @@ lemmatized_tokens = [wordnet_lemmatizer.lemmatize(t) for t in filtered_tokens]
 from collections import Counter
 bow = Counter(lemmatized_tokens)
 
-#print(bow.most_common(100))
+print(bow.most_common(100))
