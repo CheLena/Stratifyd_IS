@@ -44,4 +44,4 @@ lemmatized_tokens = [wordnet_lemmatizer.lemmatize(t) for t in filtered_tokens]
 from collections import Counter
 bow = Counter(lemmatized_tokens)
 
-print(bow.most_common(50))
+print(bow.most_common(100))
