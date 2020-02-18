@@ -15,6 +15,7 @@ cwd = os.getcwd()
 filepath_text = os.path.join(cwd, filename_text)
 nltk_text = Text(nltk.corpus.gutenberg.words(filepath_text))
 nltk_text.concordance("virginia")
+
 nltk_text.similar('shot')
 nltk_text.dispersion_plot(["win", "Virginia", "Purdue"])
 
