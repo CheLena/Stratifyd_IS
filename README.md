@@ -14,6 +14,8 @@
 ### Data Sets
    * Virginia VS Purdue 2019
 ### Participant Workspaces
+   * Owen
+      * Pre-processed bag of words model for Virginia vs Purdue 2019.
 ### Workshop Materials
 
 
