@@ -16,7 +16,9 @@ closedCaptions = f.read()
 import string # for string.puncutation
 table = str.maketrans('','', string.punctuation)
 stripped = closedCaptions.translate(table)
-print(stripped)
+
+#print(stripped)
+
 # tokenize
 from nltk.tokenize import word_tokenize
 tokens = word_tokenize(stripped)
