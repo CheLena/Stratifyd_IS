@@ -81,3 +81,9 @@ import matplotlib.pyplot as plt
 
 plt.hist([count_applause, count_music])
 plt.show()
+
+
+"""
+USE REGEX TO EXTRACT ANY OCCURENCE OF [a-z] in our data. This will show me if there
+are any non-textual occurences of data outside of just music and applause!!!
+"""
