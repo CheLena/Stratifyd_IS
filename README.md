@@ -16,6 +16,7 @@
 ### Participant Workspaces
    * Owen
       * Pre-processed bag of words model for Virginia vs Purdue 2019.
+      * Dispersion plot and concordence of select words based on BOW model.
    * Dan
       * Word and sentence tokenization for Virginia vs. Purdue 2019. Set up virtual environment.
       * Completed stemming using PorterStemmer
