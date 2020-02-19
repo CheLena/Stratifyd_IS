@@ -18,6 +18,9 @@
       * Pre-processed bag of words model for Virginia vs Purdue 2019.
    * Dan
       * Word and sentence tokenization for Virginia vs. Purdue 2019. Set up virtual environment.
+      * Completed stemming using PorterStemmer
+      * Total count of music timeouts and audience applause
+      * WIP: Histogram of the count of music timeouts and audience applauses
 ### Workshop Materials
 
 
