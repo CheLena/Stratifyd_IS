@@ -77,39 +77,40 @@ for word in words:
 print(count_applause + count_music)
 
 """
-USE REGEX TO EXTRACT ANY OCCURENCE OF [a-z] in our data. This will show me if there
+USE REGEX TO EXTRACT ANY OCCURENCE OF [a-zA-z0-9] in our data. This will show me if there
 are any non-textual occurences of data outside of just music and applause!!!
 """
-# import re
+import re
+remove_punctuation_custom = string.punctuation.replace('[', '').replace(']','')
+words_filtered = readFile.translate(remove_punctuation_custom)
+word_token2 = word_tokenize(words_filtered)
 
-# remove_punctuation_custom = string.punctuation.replace('[', '').replace(']','')
-# words2 = readFile.translate(remove_punctuation_custom)
-# words2 = word_tokenize(words2)
-# print(words2)
-# count_open_bracket = 0
-# count_closed_bracket = 0
-# i = 0
-# for word in words2:
-#     i=i+1
-#     if word =="[":
-#         try:
-#             if (words2[i+1]=="Applause"):
-#                 count_open_bracket+= 1
-#         except:
-#             print(count_open_bracket)
-#     elif word =="]":
-#         count_closed_bracket +=1
-#         i=i+1
-# print(count_open_bracket, count_closed_bracket) # check if each opening bracket has a closing bracket
 
+i = 0
+unique_vals = []
+all_vals = []
+for word in word_token2:
+    i = i + 1
+    if word == "[":
+        all_vals.append(word_token2[i].lower())
+        if (word_token2[i] not in unique_vals):
+            unique_vals.append(word_token2[i])
+
+print(unique_vals) 
+print(len(all_vals))
 
 """
 Part Four: Graphing histogram of number of applauses and number of music segments
 """
 import streamlit 
 import matplotlib.pyplot as plt
+import seaborn as s
 
-print(count_applause)
-print(count_music)
-plt.hist([music_arr, applause_arr])
+
+plt.hist(all_vals, color='royalblue', alpha=0.8)
+plt.title("Occurences of Non-textual Data")
+plt.xlabel("Type of Non-textual Data")
+plt.ylabel("Count")
 plt.show()
+
+
