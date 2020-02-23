@@ -22,6 +22,7 @@
       * Completed stemming using PorterStemmer
       * Total count of music timeouts and audience applause
       * Histogram of non-conversational data (Laughter, applause, and background music)
+      * Function that calls the concordance method on the textual data. Next, I will work with the timestamp data to create data visualizations.
 ### Workshop Materials
 
 
