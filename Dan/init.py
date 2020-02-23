@@ -1,6 +1,6 @@
+
 """
 EDA with the Virginia vs. Purdue game from 2019 March Madness
-
 @author Dan Murphy
 @date Monday, February 17th, 2019
 """
@@ -107,10 +107,25 @@ import matplotlib.pyplot as plt
 import seaborn as s
 
 
-plt.hist(all_vals, color='royalblue', alpha=0.8)
-plt.title("Occurences of Non-textual Data")
-plt.xlabel("Type of Non-textual Data")
-plt.ylabel("Count")
-plt.show()
+# plt.hist(all_vals, color='royalblue', alpha=0.8)
+# plt.title("Occurences of Non-textual Data")
+# plt.xlabel("Type of Non-textual Data")
+# plt.ylabel("Count")
+# plt.show()
 
 
+"""
+Part Five: Ginding the sentences before and after the applause, laughter, and music occurrences
+"""
+from nltk.text import Text
+
+textual_data = Text(lower_words)
+
+arr = []
+def concord(list, array):
+    for val in list:
+         print(textual_data.concordance(val, lines = 150))
+        
+
+concord(unique_vals, arr)
+# define a function to call the concordance method on the Textual version of lower_words
