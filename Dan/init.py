@@ -74,7 +74,7 @@ for word in words:
     elif word == "Music":
         count_music += 1
         music_arr.append(word)
-print(count_applause + count_music)
+# print(count_applause + count_music)
 
 """
 USE REGEX TO EXTRACT ANY OCCURENCE OF [a-zA-z0-9] in our data. This will show me if there
@@ -127,5 +127,11 @@ def concord(list, array):
          print(textual_data.concordance(val, lines = 150))
         
 
-concord(unique_vals, arr)
+# concord(unique_vals, arr)
 # define a function to call the concordance method on the Textual version of lower_words
+
+unique_vals = [val.lower() for val in unique_vals]
+def disp_plot(data, arr):
+    data.dispersion_plot(arr)
+
+disp_plot(textual_data, unique_vals)
