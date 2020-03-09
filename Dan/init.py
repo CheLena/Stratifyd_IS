@@ -135,3 +135,23 @@ def disp_plot(data, arr):
     data.dispersion_plot(arr)
 
 disp_plot(textual_data, unique_vals)
+
+
+
+# count number of consonants and vowels in the data
+consonant_list = ['B', 'b','C', 'c','D', 'd','F', 'f', 'G', 'g','H', 'h','J', 'j','K', 'k','L', 'l','M', 'm','N', 'n','P', 'p','Q', 'q','R', 'r','S', 's','T', 't','V', 'v','X', 'x', 'Z', 'z', 'W', 'w', 'Y', 'y']
+vowel_list = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u']
+
+countConsonant = 0
+countVowel = 0
+for word in removePunctuation:
+    for char in word:
+        for v in vowel_list:
+            if char == v:
+                countVowel += 1
+            else:
+                for c in consonant_list:
+                    if char == c:
+                        countConsonant += 1
+print(countConsonant)
+print(countVowel)                        
