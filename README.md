@@ -3,7 +3,7 @@
 ## Participants
  - Owen Bezick
  - Dan Murphy
- - Malcomb McCabe
+ - Malcolm McCabe
  - Patrick Kelly
 ## Advisor
  - Dr. Che Smith
@@ -11,7 +11,7 @@
 ## Table of Contents
 ### Data Camp Files
    * NLP Chapters 1-4
-   * RNN for LM Chapters 1-4
+   * RNN for LM Chapters 1-4 (in progress)
 ### Data Sets
    * Virginia VS Purdue 2019
 ### Participant Workspaces
