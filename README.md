@@ -11,6 +11,7 @@
 ## Table of Contents
 ### Data Camp Files
    * NLP Chapters 1-4
+   * RNN for LM Chapters 1-4
 ### Data Sets
    * Virginia VS Purdue 2019
 ### Participant Workspaces
