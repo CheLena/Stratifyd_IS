@@ -1,0 +1,26 @@
+---
+title: "March Madness NLP Workshop Instructions"
+author: "Dan Murphy, Owen Beznick, Patrick Kelly, and Malcolm McCabe"
+date: "3/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting started
+
+### 1. Right Click [here](https://colab.research.google.com/drive/1q0sNDVmBfyrBrBVBT8TdkX4SgiUfwtMf) and open in a new tab to get started with Google Colab. 
+
+### 2. After opening up the Google Colab, navigate to the file tab, click on it, and then select "Save a Copy in Drive."  
+
+![File -> Save a Copy in Drive](/Users/danielmurphy/Desktop/colab1.png)
+
+
+### 3. After clicking on this, navigate to your google drive and search for "Copy of March-Madness-NLP.ipynb". It should be located on the main screen under Quick Access:
+
+
+![Google Drive Colab](/Users/danielmurphy/Desktop/colab2.png)
+
+### 4. Now, open the Colab notebook and navigate throughout the page. Read through the Learning Outcomes, familiarize yourself with the format, and get ready to learn about Natural Language Processing with Dr. Che Smith, Dan Murphy, Owen Bezick, Malcolm McCabe, and Patrick Kelly. 
