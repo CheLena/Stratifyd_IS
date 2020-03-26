@@ -1,6 +1,6 @@
 ---
 title: "March Madness NLP Workshop Instructions"
-author: "Dan Murphy, Owen Beznick, Patrick Kelly, and Malcolm McCabe"
+author: "Dan Murphy, Owen Bezick, Patrick Kelly, and Malcolm McCabe"
 date: "3/25/2020"
 output: html_document
 ---
@@ -13,14 +13,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### 1. Right Click [here](https://colab.research.google.com/drive/1q0sNDVmBfyrBrBVBT8TdkX4SgiUfwtMf) and open in a new tab to get started with Google Colab. 
 
-### 2. After opening up the Google Colab, navigate to the file tab, click on it, and then select "Save a Copy in Drive."  
+### 2. After opening up the Google Colab, be sure you are signed into the Google Drive account where you want to store a copy of the file. navigate to the file tab (pictured below) and then select "Save a Copy in Drive."  
 
 ![File -> Save a Copy in Drive](/Users/danielmurphy/Desktop/colab1.png)
 
 
-### 3. After clicking on this, navigate to your google drive and search for "Copy of March-Madness-NLP.ipynb". It should be located on the main screen under Quick Access:
+### 3. After clicking on this, your file should now pop up in another window or tab. Otherwise, you can navigate to your google drive and search for "Copy of March-Madness-NLP.ipynb". It should be located on the main screen under Quick Access (see screenshot below). You may rename the file if you wish.
 
 
 ![Google Drive Colab](/Users/danielmurphy/Desktop/colab2.png)
 
-### 4. Now, open the Colab notebook and navigate throughout the page. Read through the Learning Outcomes, familiarize yourself with the format, and get ready to learn about Natural Language Processing with Dr. Che Smith, Dan Murphy, Owen Bezick, Malcolm McCabe, and Patrick Kelly. 
+### 4. If you have any trouble with these instructions, contact one of the instructors. 
+
+### 5. Now, open the Colab notebook and navigate throughout the page. Read through the Learning Outcomes, familiarize yourself with the format, and get ready to learn about Natural Language Processing with Dr. Che Smith, Dan Murphy, Owen Bezick, Malcolm McCabe, and Patrick Kelly. 
+
