@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Getting started
 
-### 1. Right Click [here](https://colab.research.google.com/drive/1q0sNDVmBfyrBrBVBT8TdkX4SgiUfwtMf) and open in a new tab to get started with Google Colab. 
+### 1. Right Click [here](https://colab.research.google.com/drive/1w5kGK8b01B6guN2Q33otpFAmqBWx2br9) and open in a new tab to get started with Google Colab. 
 
 ### 2. After opening up the Google Colab, be sure you are signed into the Google Drive account where you want to store a copy of the file. navigate to the file tab (pictured below) and then select "Save a Copy in Drive."  
 
