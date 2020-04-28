@@ -119,7 +119,7 @@ Pt. 4 - Sentiment Analysis
 '''
 
 sia = SentimentIntensityAnalyzer()
-score = sia.polarity_scores(article)
+#score = sia.polarity_scores(article)
 print('Sentiment Analysis Score: ', score)
 
 print()
