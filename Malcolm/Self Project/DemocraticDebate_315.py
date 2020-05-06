@@ -26,6 +26,9 @@ from collections import Counter
 #Text Summarization Packages
 import heapq
 
+#Dispersion Plot Packages
+import nltk
+
 #Sentiment Analysis Packages
 from textblob import TextBlob
 
