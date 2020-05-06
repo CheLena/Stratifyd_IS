@@ -10,6 +10,8 @@ Updated on Mon Apr 27 15:23:07 2020
 Democratic Debate Analysis 3/15
 """
 
+
+
 #Web Scraping Packages
 from scrapy import Selector 
 import requests
@@ -25,7 +27,8 @@ from collections import Counter
 import heapq
 
 #Sentiment Analysis Packages
-import nltk
+from textblob import TextBlob
+
 #nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
@@ -34,8 +37,9 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 
+
 '''
-Pt. 1 - Web Scraping
+#Pt. 1 - Web Scraping
 '''
 
 url = ('https://www.rev.com/blog/transcripts/march-democratic-debate-'
@@ -49,7 +53,7 @@ article = str(sel.xpath('//*[@class="fl-callout-text"]//text()').extract())
 
 
 '''
-Pt. 2 - Preprocessing
+#Pt. 2 - Preprocessing
 '''
 
 #Tokenize article by words
@@ -81,7 +85,7 @@ print()
 
 
 '''
-Pt. 3 - Text Summarization
+#Pt. 3 - Text Summarization
 '''
 
 #Find weighted occurence frequency (similar to bow) 
@@ -115,18 +119,18 @@ print()
 
 
 '''
-Pt. 4 - Sentiment Analysis
+#Pt. 4 - Sentiment Analysis
 '''
 
-sia = SentimentIntensityAnalyzer()
-score = sia.polarity_scores(article)
-print('Sentiment Analysis Score: ', score)
+blob = TextBlob(article)
+sas = blob.sentiment
+print(sas)
 
 print()
 
 
 '''
-Pt. 5 - Data Visualization
+#Pt. 5 - Data Visualization
 '''
 
 #5.1 - Graphing word clouds -- shows most common words 
@@ -214,5 +218,75 @@ plt.show()
 
 fig = plt.subplots(figsize=(10,8))
 nltk.draw.dispersion_plot(lemmatized, ['biden', 'sander'])
+
+
+
+'''
+Section 5 - Bigram Analysis
+'''
+
+#Use lemmatized pre-processed text to find bigrams
+bigram = list(nltk.bigrams(no_stops))
+
+#Convert tuples to string and create bigram strings
+bigram_string = []
+
+for pair in bigram:
+    combine = ' '.join(pair)
+    bigram_string.append(combine)
+
+
+#Find most common bigrams
+pair_counter = {}
+
+for pair in bigram_string:
+     if pair in pair_counter:
+         pair_counter[pair] += 1
+     else:
+         pair_counter[pair] = 1
+
+popular_pairs = sorted(pair_counter, key=pair_counter.get, reverse=True)
+most_popular= popular_pairs[:5]
+print(most_popular)
+
+#Generate and plot word cloud  
+wordcloud = WordCloud(width=600, height=600, background_color='white', 
+                      min_font_size=10).generate_from_frequencies(pair_counter)
+
+plt.figure(figsize = (6,6), facecolor = None)
+plt.imshow(wordcloud)
+plt.axis('off')
+plt.tight_layout(pad = 0)
+
+plt.show()
+
+
+'''
+Section 6 - Trigrams
+'''
+
+#Define trigrams
+trigrams = list(nltk.trigrams(no_stops))
+
+#Convert "tri-elements" to trigram strings
+trigram_string = []
+
+for triple in trigrams:
+    combine = ' '.join(triple)
+    trigram_string.append(combine)
+
+#Find most common trigrams
+tri_counter = {}
+
+for triple in trigram_string:
+    if triple in tri_counter:
+        tri_counter[triple] += 1
+    else:
+        tri_counter[triple] = 1
+        
+popular_triples = sorted(tri_counter, key=tri_counter.get, reverse=True)
+tri_most_popular = popular_triples[:20]
+print(tri_most_popular)
+    
 
     
